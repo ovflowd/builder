@@ -1,4 +1,4 @@
-# PO Query Builder
+# Koine Query Builder
 
 Query Builder for easing the SQL composing
 
@@ -48,14 +48,14 @@ This is an example of select query.
 $fields = array('u.name AS name', 'r.name AS role');
 
 // Selecting via factory
-$select = PO\QueryBuilder::factorySelect($fields);
+$select = Koine\QueryBuilder::factorySelect($fields);
 
 // Selecting via the select method
-$select = PO\QueryBuilder::factorySelect()
+$select = Koine\QueryBuilder::factorySelect()
     ->select($fields);
 
 // or alternatively
-$select = new PO\QueryBuilder\Statements\Select();
+$select = new Koine\QueryBuilder\Statements\Select();
 $select->select($fields);
 
 // From
@@ -75,10 +75,10 @@ $select->toSql();
 
 ```php
 // Using the factory
-$insert = PO\QueryBuilder::insert();
+$insert = Koine\QueryBuilder::insert();
 
 // Or alternatively
-$insert = new PO\QueryBuilder\Statements\Insert();
+$insert = new Koine\QueryBuilder\Statements\Insert();
 
 $insert->into('users')->values(array(
     'name'  => 'Jon Doe',
@@ -99,10 +99,10 @@ $insert->toSql();
 - Applies [placeholders](#using-placeholders)
 
 ```php
-$update = PO\QueryBuilder::update('users');
+$update = Koine\QueryBuilder::update('users');
 
 // or
-$update = new PO\QueryBuilder\Statements\Update;
+$update = new Koine\QueryBuilder\Statements\Update;
 $update->table('users');
 
 // setting values and conditions
