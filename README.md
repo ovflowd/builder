@@ -2,14 +2,19 @@
 
 Query Builder for easing the SQL composing
 
-[![Build Status](https://travis-ci.org/mjacobus/php-query-builder.png?branch=master)](https://travis-ci.org/mjacobus/php-query-builder)
-[![Coverage Status](https://coveralls.io/repos/mjacobus/php-query-builder/badge.png)](https://coveralls.io/r/mjacobus/php-query-builder)
-[![Code Climate](https://codeclimate.com/github/mjacobus/php-query-builder.png)](https://codeclimate.com/github/mjacobus/php-query-builder)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjacobus/php-query-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/php-query-builder/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/php-objects/query-builder/v/stable.svg)](https://packagist.org/packages/php-objects/query-builder)
-[![Total Downloads](https://poser.pugx.org/php-objects/query-builder/downloads.svg)](https://packagist.org/packages/php-objects/query-builder)
-[![Latest Unstable Version](https://poser.pugx.org/php-objects/query-builder/v/unstable.svg)](https://packagist.org/packages/php-objects/query-builder)
-[![License](https://poser.pugx.org/php-objects/query-builder/license.svg)](https://packagist.org/packages/php-objects/query-builder)
+Code information:
+
+[![Build Status](https://travis-ci.org/koinephp/QueryBuilder.png?branch=master)](https://travis-ci.org/koinephp/QueryBuilder)
+[![Coverage Status](https://coveralls.io/repos/koinephp/QueryBuilder/badge.png)](https://coveralls.io/r/koinephp/QueryBuilder)
+[![Code Climate](https://codeclimate.com/github/koinephp/QueryBuilder.png)](https://codeclimate.com/github/koinephp/QueryBuilder)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koinephp/QueryBuilder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/koinephp/QueryBuilder/?branch=master)
+
+Package information:
+
+[![Latest Stable Version](https://poser.pugx.org/koine/query-builder/v/stable.svg)](https://packagist.org/packages/koine/query-builder)
+[![Total Downloads](https://poser.pugx.org/koine/query-builder/downloads.svg)](https://packagist.org/packages/koine/query-builder)
+[![Latest Unstable Version](https://poser.pugx.org/koine/query-builder/v/unstable.svg)](https://packagist.org/packages/koine/query-builder)
+[![License](https://poser.pugx.org/koine/query-builder/license.svg)](https://packagist.org/packages/koine/query-builder)
 
 
 ## Installing
