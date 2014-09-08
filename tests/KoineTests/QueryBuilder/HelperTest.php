@@ -73,12 +73,14 @@ class HelperTest extends PHPUnit_Framework_TestCase
      */
     public function itVerifiesIfValueIsPlaceholder()
     {
+        $this->assertTrue($this->o->isPlaceholder(':placeholder2'));
         $this->assertTrue($this->o->isPlaceholder(':placeholder'));
         $this->assertTrue($this->o->isPlaceholder(':placeHolder'));
         $this->assertTrue($this->o->isPlaceholder(':place_Holder'));
         $this->assertFalse($this->o->isPlaceholder('s:st'));
         $this->assertFalse($this->o->isPlaceholder('string'));
         $this->assertFalse($this->o->isPlaceholder('1'));
+        $this->assertFalse($this->o->isPlaceholder(':11'));
     }
 
     /**

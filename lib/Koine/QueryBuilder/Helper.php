@@ -121,7 +121,7 @@ class Helper
      */
     public function isPlaceholder($value)
     {
-        return preg_match('/^\:[_a-zA-Z]+$/', $value) === 1;
+        return preg_match('/^\:[_a-zA-Z]/', $value) === 1;
     }
 
     /**
