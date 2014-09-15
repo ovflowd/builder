@@ -122,7 +122,7 @@ class SelectTest extends PHPUnit_Framework_TestCase
         $this->object->limit(10);
         $this->assertEquals($sql, $this->object->toSql());
 
-        $sql .= ', 3';
+        $sql .= ' OFFSET 3';
         $this->object->limit(10, 3);
         $this->assertEquals($sql, $this->object->toSql());
     }

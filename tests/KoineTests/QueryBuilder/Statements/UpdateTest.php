@@ -113,7 +113,7 @@ class UpdateTest extends PHPUnit_Framework_TestCase
         $this->object->limit(10);
         $this->assertEquals($sql, $this->object->toSql());
 
-        $sql .= ', 2';
+        $sql .= ' OFFSET 2';
         $this->object->limit(10, 2);
         $this->assertEquals($sql, $this->object->toSql());
     }

@@ -8,6 +8,7 @@ use Koine\QueryBuilder\Clauses\LimitClause;
 
 /**
  * @author Marcelo Jacobus <marcelo.jacobus@gmail.com>
+ * @group focus
  */
 class LimitClauseTest extends PHPUnit_Framework_TestCase
 {
@@ -38,8 +39,8 @@ class LimitClauseTest extends PHPUnit_Framework_TestCase
         $this->o->addParam(1);
         $this->assertEquals('LIMIT 1', $this->o->toSql());
 
-        $this->o->addParam('2');
-        $this->assertEquals('LIMIT 1, 2', $this->o->toSql());
+        $this->o->addParam(2);
+        $this->assertEquals('LIMIT 1 OFFSET 2', $this->o->toSql());
     }
 
     /**

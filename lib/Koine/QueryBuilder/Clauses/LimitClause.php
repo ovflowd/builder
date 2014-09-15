@@ -9,14 +9,13 @@ class LimitClause extends Base
 {
     /**
      * Return the resulting query
-     * @return string
      */
     public function toSql()
     {
         if ($this->isEmpty()) {
             return '';
         } else {
-            return 'LIMIT ' . implode(', ', $this->getParams());
+            return 'LIMIT ' . implode(' OFFSET ', $this->getParams());
         }
     }
 }

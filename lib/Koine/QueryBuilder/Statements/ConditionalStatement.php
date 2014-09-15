@@ -136,9 +136,9 @@ abstract class ConditionalStatement extends Base
      *           'foobar' => 'foo'
      *       ));
      *
-     * @param  array|string    $conditions
-     * @param  string          $value
-     * @param  string          $operator
+     * @param  array|string       $conditions
+     * @param  string             $value
+     * @param  string             $operator
      * @return Koine\QueryBuilder
      */
     public function where($conditions, $value = null, $operator = '=')

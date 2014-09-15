@@ -41,7 +41,7 @@ class Base
     /**
      * Add one param to the existing collection of params
      *
-     * @param  mixed                          $param
+     * @param  mixed                             $param
      * @return Koine\QueryBuilder\Clauses\Clause
      */
     public function addParam($param)
@@ -54,7 +54,7 @@ class Base
     /**
      * Set the params. Remove old ones.
      *
-     * @param  array                          $params
+     * @param  array                             $params
      * @return Koine\QueryBuilder\Clauses\Clause
      */
     public function setParams(array $params)
@@ -75,7 +75,7 @@ class Base
     /**
      * Add a collection of params
      *
-     * @param  array                          $params
+     * @param  array                             $params
      * @return Koine\QueryBuilder\Clauses\Clause
      */
     public function addParams(array $params)
