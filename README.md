@@ -15,6 +15,7 @@ Package information:
 [![Total Downloads](https://poser.pugx.org/koine/query-builder/downloads.svg)](https://packagist.org/packages/koine/query-builder)
 [![Latest Unstable Version](https://poser.pugx.org/koine/query-builder/v/unstable.svg)](https://packagist.org/packages/koine/query-builder)
 [![License](https://poser.pugx.org/koine/query-builder/license.svg)](https://packagist.org/packages/koine/query-builder)
+[![Dependency Status](https://gemnasium.com/koinephp/QueryBuilder.png)](https://gemnasium.com/koinephp/QueryBuilder)
 
 
 ## Installing
