@@ -29,7 +29,7 @@ Append the lib to your requirements key in your composer.json.
     // [..]
     require: {
         // append this line to your requirements
-        "php-objects/query-builder": "dev-master"
+        "koine/query-builder": "dev-master"
     }
 }
 ```
@@ -222,7 +222,7 @@ $insert->toSql(array(
 
 ## Issues/Features proposals
 
-[Here](https://github.com/mjacobus/php-query-builder/issues) is the issue tracker.
+[Here](https://github.com/koinephp/query-builder/issues) is the issue tracker.
 
 ## Contributing
 
