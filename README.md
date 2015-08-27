@@ -156,7 +156,7 @@ $query->where('email', 'admin@abc.com', '<>');
 // WHERE email <> "admin@abc.com"
 
 $query->where('email', '%@google.com', 'LIKE');
-// WHERE email LIKE "%@abc.com"
+// WHERE email LIKE "%@google.com"
 
 $query->where('age', 20);
 // WHERE age = 20
