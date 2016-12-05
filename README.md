@@ -251,7 +251,7 @@ phpcs --standard=PSR2 tests
 ./bin/travis/run_phpcs.sh
 ```
 
-## Lincense
+## License
 [MIT](MIT-LICENSE)
 
 ## Authors
