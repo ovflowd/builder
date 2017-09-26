@@ -1,228 +1,122 @@
-# Koine Query Builder
+# Query Builder
 
-Query Builder for easing the SQL composing
+Query Builder for easing the SQL composing in NoSQL Databases
 
-Code information:
+**To be concluded**
 
-[![Build Status](https://travis-ci.org/koinephp/QueryBuilder.png?branch=master)](https://travis-ci.org/koinephp/QueryBuilder)
-[![Coverage Status](https://coveralls.io/repos/koinephp/QueryBuilder/badge.png)](https://coveralls.io/r/koinephp/QueryBuilder)
-[![Code Climate](https://codeclimate.com/github/koinephp/QueryBuilder.png)](https://codeclimate.com/github/koinephp/QueryBuilder)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koinephp/QueryBuilder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/koinephp/QueryBuilder/?branch=master)
-
-Package information:
-
-[![Latest Stable Version](https://poser.pugx.org/koine/query-builder/v/stable.svg)](https://packagist.org/packages/koine/query-builder)
-[![Total Downloads](https://poser.pugx.org/koine/query-builder/downloads.svg)](https://packagist.org/packages/koine/query-builder)
-[![Latest Unstable Version](https://poser.pugx.org/koine/query-builder/v/unstable.svg)](https://packagist.org/packages/koine/query-builder)
-[![License](https://poser.pugx.org/koine/query-builder/license.svg)](https://packagist.org/packages/koine/query-builder)
-[![Dependency Status](https://gemnasium.com/koinephp/QueryBuilder.png)](https://gemnasium.com/koinephp/QueryBuilder)
-
+**Designed for Couchbase 5.0**
 
 ## Installing
 
 ### Installing via Composer
-Append the lib to your requirements key in your composer.json.
 
-```javascript
-{
-    // composer.json
-    // [..]
-    require: {
-        // append this line to your requirements
-        "koine/query-builder": "dev-master"
-    }
-}
-```
+`composer require sant0ro/builder`
 
 ### Alternative install
 - Learn [composer](https://getcomposer.org). You should not be looking for an alternative install. It is worth the time. Trust me ;-)
 - Follow [this set of instructions](#installing-via-composer)
 
-## Usage
+# Usage
 
-### SELECT
+## Operators
 
-This is an example of select query. 
+**To be concluded**
 
-- Applies [limit](#limit)
-- Applies [where](#where)
-- Applies [orderBy](#order-by)
-- Applies [groupBy](#group-by)
-- Applies [placeholders](#using-placeholders)
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/operators.html)
 
-```php
-$fields = array('u.name AS name', 'r.name AS role');
+## Functions
 
-// Selecting via factory
-$select = Koine\QueryBuilder::factorySelect($fields);
+### Comparing Data
 
-// Selecting via the select method
-$select = Koine\QueryBuilder::factorySelect()
-    ->select($fields);
+**To be concluded**
 
-// or alternatively
-$select = new Koine\QueryBuilder\Statements\Select();
-$select->select($fields);
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/comparisonfun.html)
 
-// From
-$select->from('users u');
+### Mapping Data
 
-// Adding joins
-$select->innerJoin('roles r', 'u.id = r.user_id');
+**To be concluded**
 
-$select->toSql();
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/jsonfun.html)
 
-// SELECT u.name AS name, r.name AS role 
-// FROM users u INNER JOIN roles r ON u.idi = r.user_id
-```
+### Array Functions
 
-### INSERT
-- Applies [placeholders](#using-placeholders)
+**To be concluded**
 
-```php
-// Using the factory
-$insert = Koine\QueryBuilder::insert();
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/arrayfun.html)
 
-// Or alternatively
-$insert = new Koine\QueryBuilder\Statements\Insert();
+### Metadata Accessors
 
-$insert->into('users')->values(array(
-    'name'  => 'Jon Doe',
-    'email' => 'jon@doe.com'
-));
+**To be concluded**
 
-$insert->toSql();
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/metafun.html)
 
-// INSERT INTO users (name, email) VALUES ('Jon Doe', 'jon@doe.com');
-```
+### Miscellaneous
 
+**To be concluded**
 
-### UPDATE
-- Applies [limit](#limit)
-- Applies [where](#where)
-- Applies [orderBy](#order-by)
-- Applies [groupBy](#group-by)
-- Applies [placeholders](#using-placeholders)
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/metafun.html)
 
-```php
-$update = Koine\QueryBuilder::update('users');
+## Indexing Data
 
-// or
-$update = new Koine\QueryBuilder\Statements\Update;
-$update->table('users');
+### Creating Index
 
-// setting values and conditions
+**To be concluded**
 
-$update->set(array(
-        'enabled' => 1
-    ))->where('email', ':email');
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/createindex.html)
 
-$update->toSql(array(
-    'email' => 'admin@email.com'
-));
+### Creating Primary Key
 
-// UPDATE users SET enabled = 1 WHERE email = 'admin@email.com'
-```
+**To be concluded**
 
-### DELETE
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/createprimaryindex.html)
 
-TODO: Implement
+### Building Index
 
-### WHERE
+**To be concluded**
 
-Every time a ```where()``` method is called, the condition is added to the query.
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/build-index.html)
 
+### Deleting Index
 
-```php
+**To be concluded**
 
-// method signature
-$query->where($field, $value, $operator);
+[Reference](https://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/dropindex.html)
 
-// or
-$query->where($condition);
+### Deleting Primary Key
 
-// or
-$query->where(array(
-    array($field, $value, $operator),
-    array($condition),
-));
+**To be concluded**
 
-// Below some valid examples:
+[Reference](hhttps://developer.couchbase.com/documentation/server/5.0/n1ql/n1ql-language-reference/dropprimaryindex.html)
 
-$query->where('email', 'admin@abc.com');
-// WHERE email = 'admin@abc.com'
+## Selecting Data
 
-$query->where('email', 'admin@abc.com', '<>');
-// WHERE email <> "admin@abc.com"
+### SELECT Statement
 
-$query->where('email', '%@google.com', 'LIKE');
-// WHERE email LIKE "%@google.com"
+### WHERE Statement
 
-$query->where('age', 20);
-// WHERE age = 20
+## Inserting Data
 
-$query->where('code', 001);
-// WHERE code = 001
+### Insert Statement
 
-$query->where('code', array('value' => '001'));
-// WHERE code = '001'
+## Updating Data
 
-$query->where('(code = 1 OR code = 2)'));
-// WHERE (code = 1 OR code = 2)
+### Update Statement
 
-// multiple conditioins, one method call
-$query->where(array(
-    array('email', 'admin@abc.com', '<>'),
-    array('email', '%@google.com', 'LIKE'),
-    array('age', 20),
-    array('(code = 1 OR code = 2)'),
-    array('hash', array('value' => 'SOMEFUNCTION()')),
-));
+### Upsert Statement
 
-// WHERE condition 1 AND condition 2..
-```
+## Managing Results
 
-### ORDER BY
-```php
-$query->orderBy('name DESC');
-// or
-$query->orderBy(array('name DESC', 'age ASC'));
-```
+### Grouping Data
 
-### GROUP BY
-```php
-$query->groupBy('a, b, c');
-// or
-$query->groupBy(array('a', 'b', 'b'));
-```
+### Sorting Data
 
-### LIMIT
-```php
-$query->limit(2);
-$query->limit(2, 1);
-```
+### Limit Data Results
 
-### Using placeholders
-
-Placeholders are a good way for building your queries when you don't know what values are going to be used (because they depend on the result of a query yet to be executed, for instance).
-
-```php
-$insert->into('users')->values(array(
-    'name'  => ':name',
-    'email' => ':email'
-));
-
-$insert->toSql(array(
-    'name'  => 'Jon Doe',
-    'email' => 'jon@doe.com'
-));
-
-// INSERT INTO users (name, email) VALUES ('Jon Doe', 'jon@doe.com');
-```
+# F.A.Q.
 
 ## Issues/Features proposals
 
-[Here](https://github.com/koinephp/query-builder/issues) is the issue tracker.
+[Here](https://github.com/sant0ro/builder/issues) is the issue tracker.
 
 ## Contributing
 
@@ -258,3 +152,7 @@ phpcs --standard=PSR2 tests
 
 - [Marcelo Jacobus](https://github.com/mjacobus)
 
+## Contributors
+
+- [Claudio Santoro](https://github.com/sant0ro)
+- [Sergio Bittencourt](https://github.com/Sergio-Bittencourt)
