@@ -1,3 +1,5 @@
+**Warning:** this repository it's in planning stage, nothing here it's done or functional.
+
 # Query Builder
 
 Query Builder for easing the SQL composing in NoSQL Databases
