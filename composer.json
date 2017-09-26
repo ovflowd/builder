@@ -1,11 +1,19 @@
 {
-    "name": "koine/query-builder",
-    "description": "Query Builder - Making SQL composing easier",
+    "name": "sant0ro/query-builder",
+    "description": "A Couchbase Query Builder in PHP",
     "license": "MIT",
     "authors": [
         {
             "name": "Marcelo Jacobus",
             "email": "marcelo.jacobus@gmail.com"
+        },
+        {
+            "name": "Claudio Santoro",
+            "email": "claudio.santoro@ieee.org"
+        },
+        {
+            "name": "Sergio Bittencourt",
+            "email": "sergio.augusto@redes.unb.br"
         }
     ],
     "require-dev": {
